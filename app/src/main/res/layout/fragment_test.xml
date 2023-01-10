@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.fovsol.fev.screens.test.TestFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fovsol.fev.screens.test.TestViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/all_horizontal_margin"
+                android:layout_marginEnd="@dimen/all_horizontal_margin"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/all_vertical_big_spacing_elements" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/imageCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="235dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/dark_blue"
+                    app:strokeWidth="1dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="false"
+                        android:cropToPadding="true"
+                        android:scaleType="fitCenter"
+                        android:backgroundTint="@color/black"
+                        app:srcCompat="@drawable/no_img" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/all_vertical_big_spacing_elements" />
+
+
+                <TextView
+                    android:id="@+id/questionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:text="@{viewModel.question}"
+                    android:textSize="@dimen/medium_size_font" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/all_vertical_big_spacing_elements" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/dark_blue"
+                    app:strokeWidth="1dp">
+
+                    <CheckBox
+                        android:id="@+id/optionOneCheckBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/test_margin_start_checkbox"
+                        android:layout_marginTop="@dimen/test_margin_top_checkbox"
+                        android:layout_marginEnd="@dimen/test_margin_start_checkbox"
+                        android:layout_marginBottom="@dimen/test_margin_top_checkbox"
+                        android:text="@{viewModel.answer1}"
+                        android:textAppearance="@style/CustomCheckBoxTextStyle"
+                        android:theme="@style/CustomCheckBox"
+                        android:checked="@={viewModel.currentSelection.ans1_sel}"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/all_vertical_small_spacing_elements" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/dark_blue"
+                    app:strokeWidth="1dp">
+
+                    <CheckBox
+                        android:id="@+id/optionTwoCheckBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/test_margin_start_checkbox"
+                        android:layout_marginTop="@dimen/test_margin_top_checkbox"
+                        android:layout_marginEnd="@dimen/test_margin_start_checkbox"
+                        android:layout_marginBottom="@dimen/test_margin_top_checkbox"
+                        android:text="@{viewModel.answer2}"
+                        android:textAppearance="@style/CustomCheckBoxTextStyle"
+                        android:theme="@style/CustomCheckBox"
+                        android:checked="@={viewModel.currentSelection.ans2_sel}"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/all_vertical_small_spacing_elements" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/dark_blue"
+                    app:strokeWidth="1dp">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/optionThreeCheckBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/test_margin_start_checkbox"
+                        android:layout_marginTop="@dimen/test_margin_top_checkbox"
+                        android:layout_marginEnd="@dimen/test_margin_start_checkbox"
+                        android:layout_marginBottom="@dimen/test_margin_top_checkbox"
+                        android:text="@{viewModel.answer3}"
+                        android:textAppearance="@style/CustomCheckBoxTextStyle"
+                        android:theme="@style/CustomCheckBox"
+                        android:checked="@={viewModel.currentSelection.ans3_sel}"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/prevButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/all_horizontal_margin"
+                android:layout_marginEnd="@dimen/all_horizontal_margin"
+                android:layout_weight="0.2"
+                android:backgroundTint="@color/dark_blue"
+                android:onClick="@{() -> viewModel.prevQuestion()}"
+                android:text="@string/test_previous_question" />
+
+            <TextView
+                android:id="@+id/progressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:fontFamily="@font/roboto"
+                android:textAlignment="center"
+                android:textSize="@dimen/medium_size_font"
+                android:textStyle="bold"
+                android:text="@{viewModel.progressString}"
+                tools:text="0/30" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/all_horizontal_margin"
+                android:layout_marginEnd="@dimen/all_horizontal_margin"
+                android:layout_weight="0.2"
+                android:onClick="@{() -> viewModel.nextQuestion()}"
+                android:text="@string/test_next_question" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
