@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="test_padding_start_checkbox">5dp</dimen>
+    <dimen name="test_margin_start_checkbox">5dp</dimen>
+    <dimen name="test_margin_top_checkbox">10dp</dimen>
+
+    <dimen name="all_vertical_big_spacing_elements">15dp</dimen>
+    <dimen name="all_vertical_small_spacing_elements">5dp</dimen>
+    <dimen name="all_horizontal_margin">15dp</dimen>
+
+    <dimen name="medium_size_font">20sp</dimen>
+</resources>

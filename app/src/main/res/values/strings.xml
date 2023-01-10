@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FEV</string>
+    <string name="tests_overview_format">%d KALUAR\n%d DESHTUAR\n%d ZBRAZET</string>
+    <string name="tests_result_format">%d SAKTË\n%d PASAKTË</string>
+    <string name="tests_title_name">Testet</string>
+    <string name="test_list_item_test_naming">Testi %d</string>
+    <string name="test_list_item_perc_format">%d%%</string>
+    <string name="zero">0</string>
+    <string name="test_next_question">Para</string>
+    <string name="test_previous_question">Prapa</string>
+    <string name="test_progress_text">%d/30</string>
+    <string name="result_title_name">Rezultatet</string>
+</resources>
