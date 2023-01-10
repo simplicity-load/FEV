@@ -24,7 +24,9 @@ A mock testing application for the grade B vehicle exam in Kosovo
 
 ## Features
 
-- Take 100 exams featuring random questions from 8 categories (we made sure you wont miss one question).
+- Take 100 exams featuring random questions from 8 categories (we made sure you won't miss one question).
+
+- Fully offline, doesn't matter where you are, you will be able to take exams.
 
 - See the result of all the tests you've taken (at any time - COMING SOON).
 
